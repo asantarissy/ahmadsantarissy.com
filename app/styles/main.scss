@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+
+  width:100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .show-mobile {
+    display: none;
+    @media (max-width: 480px){
+      display: inline-block;
+    }
+  }
+  
+  .hide-mobile {
+    @media (max-width: 480px){
+      display: none;
+    }
+  }
+
+  @media (max-width: 730px){
+    overflow: auto;
+  }
+
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .connect {
+    position: absolute;
+    top:20px;
+    left:20px;
+
+    @media (max-width: 730px){
+      position: relative;
+      top:auto;
+      left:auto;
+
+      width: 50vw;
+      height: 50vw;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 15px;
+      color:white;
+      text-decoration: none;
+      padding: 10px 0;
+      margin: 0 25px;
+      &:hover {
+        border-bottom: 5px #E83644 solid;
+      }
+
+      @media (max-width: 1024px){
+        margin: 0 10px;
+      }
+
+      @media (max-width: 730px){
+        color:black;
+      }
+    }
+
+  }
+
+  .photo {
+    width:50vw;
+    height: 100vh;
+    background: gray url("../images/bg.jpg") center;
+    background-size: cover;
+
+    @media (max-width: 730px){
+      width: 50vw;
+      height: 50vw;
+    }
+  }
+
+  .bio {
+    width:50vw;
+    height: auto;
+    overflow: auto;
+    padding: 50px;
+    padding-right: 100px;
+
+    @media (max-width: 1024px){
+      padding-right: 50px;
+    }
+
+    @media (max-width: 730px){
+      width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+
+      @media (max-width: 480px){
+        font-size: 13px;
+      }
+
+
+      padding: 20px 0;
+
+      &.title {
+        font-weight: 600;
+        font-size: 22px;
+
+        @media (max-width: 480px){
+          font-size: 20px;
+        }
+      }
+
+      &.text {
+        font-weight: 300;
+        font-size: 17px;
+
+        @media (max-width: 480px){
+          font-size: 15px;
+        }
+      }
+
+      &.medium {
+          font-weight: 500;
+      }
+
+      a {
+        color:black;
+      }
+    }
+  }
+}
