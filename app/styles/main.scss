@@ -1,3 +1,12 @@
+body {
+  overflow: hidden;
+  max-height: 100vh;
+
+  @media (max-width: 730px){
+    overflow: auto;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin:0;
@@ -8,8 +17,10 @@
 
   width:100vw;
   height: 100vh;
-  max-height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 0;
 
   .show-mobile {
     display: none;
@@ -17,21 +28,12 @@
       display: inline-block;
     }
   }
-  
+
   .hide-mobile {
     @media (max-width: 480px){
       display: none;
     }
   }
-
-  @media (max-width: 730px){
-    overflow: auto;
-  }
-
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 
   .connect {
     position: absolute;
@@ -87,56 +89,65 @@
     }
   }
 
-  .bio {
-    width:50vw;
-    height: auto;
+  .bio-container {
+    height: 100vh;
     overflow: auto;
-    padding: 50px;
-    padding-right: 100px;
-
-    @media (max-width: 1024px){
-      padding-right: 50px;
-    }
 
     @media (max-width: 730px){
-      width: 100%;
+      height: auto;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.7;
 
-      @media (max-width: 480px){
-        font-size: 13px;
+    .bio {
+      width:50vw;
+      height: auto;
+      padding: 50px;
+      padding-right: 100px;
+
+      @media (max-width: 1024px){
+        padding-right: 50px;
       }
 
+      @media (max-width: 730px){
+        width: 100%;
+      }
 
-      padding: 20px 0;
-
-      &.title {
-        font-weight: 600;
-        font-size: 22px;
+      p {
+        font-size: 16px;
+        line-height: 1.7;
 
         @media (max-width: 480px){
-          font-size: 20px;
+          font-size: 13px;
         }
-      }
 
-      &.text {
-        font-weight: 300;
-        font-size: 17px;
 
-        @media (max-width: 480px){
-          font-size: 15px;
+        padding: 20px 0;
+
+        &.title {
+          font-weight: 600;
+          font-size: 22px;
+
+          @media (max-width: 480px){
+            font-size: 20px;
+          }
         }
-      }
 
-      &.medium {
-          font-weight: 500;
-      }
+        &.text {
+          font-weight: 300;
+          font-size: 17px;
 
-      a {
-        color:black;
+          @media (max-width: 480px){
+            font-size: 15px;
+          }
+        }
+
+        &.medium {
+            font-weight: 500;
+        }
+
+        a {
+          color:black;
+        }
       }
     }
   }
