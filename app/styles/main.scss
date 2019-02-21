@@ -91,6 +91,7 @@ body {
 
   .bio-container {
     height: 100vh;
+    width:50vw;
     overflow: auto;
 
     @media (max-width: 730px){
@@ -99,7 +100,6 @@ body {
 
 
     .bio {
-      width:50vw;
       height: auto;
       padding: 50px;
       padding-right: 100px;
